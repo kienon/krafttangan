@@ -1,346 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>18 Items Gallery</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .gallery-img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-    .gallery-img:hover {
-      transform: scale(1.05);
-    }
-    .modal-img {
-      width: 100%;
-      height: auto;
-    }
-  </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Kraft tangan unik & harga mampu milik" />
+    <title>Kedai Kraft Tangan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand fw-bold" href="#">
+            <span class="lang-bm">Kedai Kraft Tangan</span>
+            <span class="lang-en d-none">Handicraft Shop</span>
+            <span class="lang-cn d-none">手工艺店</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active lang-bm" href="#">Laman Utama</a>
+                    <a class="nav-link active lang-en d-none" href="#">Home</a>
+                    <a class="nav-link active lang-cn d-none" href="#">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link lang-bm" href="#products">Produk</a>
+                    <a class="nav-link lang-en d-none" href="#products">Products</a>
+                    <a class="nav-link lang-cn d-none" href="#products">产品</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link lang-bm" href="#contact">Hubungi Kami</a>
+                    <a class="nav-link lang-en d-none" href="#contact">Contact Us</a>
+                    <a class="nav-link lang-cn d-none" href="#contact">联系我们</a>
+                </li>
+            </ul>
+            <!-- Language Dropdown -->
+            <div class="dropdown ms-3">
+                <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">BM</button>
+                <ul class="dropdown-menu" aria-labelledby="langDropdown">
+                    <li><a class="dropdown-item lang-select" data-lang="bm" href="#">BM</a></li>
+                    <li><a class="dropdown-item lang-select" data-lang="en" href="#">EN</a></li>
+                    <li><a class="dropdown-item lang-select" data-lang="cn" href="#">中文</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">
+                <span class="lang-bm">Koleksi Kraft Tangan</span>
+                <span class="lang-en d-none">Handicraft Collection</span>
+                <span class="lang-cn d-none">手工艺品收藏</span>
+            </h1>
+            <p class="lead fw-normal text-white-50 mb-0">
+                <span class="lang-bm">Produk unik & harga istimewa di kedai kami</span>
+                <span class="lang-en d-none">Unique products & special prices at our store</span>
+                <span class="lang-cn d-none">独特产品与特别优惠价格</span>
+            </p>
+        </div>
+    </div>
+</header>
+
+<!-- Promosi -->
+<section class="py-5 bg-light">
+    <div class="container px-4 px-lg-5 text-center">
+        <div class="alert alert-success shadow-sm" role="alert">
+            <h4 class="alert-heading fw-bold">
+                <i class="bi bi-stars me-2"></i>
+                <span class="lang-bm">Promosi Borong!</span>
+                <span class="lang-en d-none">Wholesale Promotion!</span>
+                <span class="lang-cn d-none">批发促销！</span>
+            </h4>
+            <p class="mb-1">
+                <span class="lang-bm">🎉 Dapatkan <strong>harga lebih murah</strong> bila beli 20 unit ke atas.</span>
+                <span class="lang-en d-none">🎉 Enjoy <strong>lower prices</strong> when you buy 20 units or more.</span>
+                <span class="lang-cn d-none">🎉 购买20件或以上可享<strong>更低价格</strong>。</span>
+            </p>
+            <p class="mb-0">
+                <span class="lang-bm">Contoh: Anyaman Rotan RM40 → <span class="fw-bold text-success">RM35</span> (20+ pcs)</span>
+                <span class="lang-en d-none">Example: Rattan Weaving RM40 → <span class="fw-bold text-success">RM35</span> (20+ pcs)</span>
+                <span class="lang-cn d-none">示例：藤编 RM40 → <span class="fw-bold text-success">RM35</span>（20件以上）</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Products -->
+<section class="py-5 bg-white" id="products">
+    <div class="container px-4 px-lg-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">
+                <span class="lang-bm">Galeri Produk</span>
+                <span class="lang-en d-none">Product Gallery</span>
+                <span class="lang-cn d-none">产品画廊</span>
+            </h2>
+            <p class="text-muted">
+                <span class="lang-bm">Koleksi kraft tangan unik kami. Harga borong lebih murah.</span>
+                <span class="lang-en d-none">Our unique handicraft collection. Wholesale prices available.</span>
+                <span class="lang-cn d-none">我们的独特手工艺品系列。提供批发价格。</span>
+            </p>
+        </div>
+        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <!-- Loop Produk 1-18 -->
+            <!-- Format Produk -->
+            <!-- ubah src gambar dan harga borong mengikut keperluan -->
+            ${Array.from({length: 18}).map((_, i) => `
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="assets/item/${i+1}.jpg" class="card-img-top" alt="Produk ${i+1}">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">
+                            <span class="lang-bm">Produk ${i+1}</span>
+                            <span class="lang-en d-none">Product ${i+1}</span>
+                            <span class="lang-cn d-none">产品 ${i+1}</span>
+                        </h5>
+                        <p class="mb-1">RM${(20+i*5).toFixed(2)} / unit</p>
+                        <small class="text-success">
+                            <span class="lang-bm">Borong 20+ pcs: RM${(15+i*4).toFixed(2)}</span>
+                            <span class="lang-en d-none">Wholesale 20+ pcs: RM${(15+i*4).toFixed(2)}</span>
+                            <span class="lang-cn d-none">批发20件以上：RM${(15+i*4).toFixed(2)}</span>
+                        </small>
+                    </div>
+                </div>
+            </div>
+            `).join('')}
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="py-5 bg-light" id="contact">
     <div class="container">
-      <a class="navbar-brand" href="#">Gallery 18 Items</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-        </ul>
-      </div>
+        <div class="text-center mb-4">
+            <h2 class="section-heading text-uppercase">
+                <span class="lang-bm">Hubungi Kami</span>
+                <span class="lang-en d-none">Contact Us</span>
+                <span class="lang-cn d-none">联系我们</span>
+            </h2>
+            <p class="section-subheading text-muted">
+                <span class="lang-bm">Kunjungi kedai atau hubungi kami untuk pertanyaan</span>
+                <span class="lang-en d-none">Visit our shop or contact us for inquiries</span>
+                <span class="lang-cn d-none">欢迎光临或联系我们了解更多</span>
+            </p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10 mb-4">
+                <div class="ratio ratio-16x9 shadow-sm">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.375274450167!2d116.08155300000001!3d5.942908000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x323b6850a335db7f%3A0x98f9242f6dbb0613!2sSyarikat%20Eng%20Tuck!5e0!3m2!1sms!2smy!4v1761203221838!5m2!1sms!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <a id="whatsappLink" href="#" target="_blank" class="btn btn-success btn-lg shadow">
+                <i class="bi bi-whatsapp me-2"></i>
+                <span class="lang-bm">Chat via WhatsApp</span>
+                <span class="lang-en d-none">Chat via WhatsApp</span>
+                <span class="lang-cn d-none">通过 WhatsApp 聊天</span>
+            </a>
+        </div>
     </div>
-  </nav>
+</section>
 
-  <!-- Gallery Section -->
-  <section id="gallery" class="py-5">
+<!-- Footer -->
+<footer class="py-5 bg-dark">
     <div class="container">
-      <h2 class="text-center mb-4">18 Items Gallery</h2>
-      <div class="row g-3">
-        <!-- Loop through items 1–18 -->
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/1.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal1" alt="Item 1">
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/2.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal2" alt="Item 2">
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/3.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal3" alt="Item 3">
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/4.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal4" alt="Item 4">
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/5.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal5" alt="Item 5">
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/6.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal6" alt="Item 6">
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/7.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal7" alt="Item 7">
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/8.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal8" alt="Item 8">
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/9.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal9" alt="Item 9">
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/10.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal10" alt="Item 10">
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/11.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal11" alt="Item 11">
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/12.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal12" alt="Item 12">
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/13.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal13" alt="Item 13">
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/14.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal14" alt="Item 14">
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/15.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal15" alt="Item 15">
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/16.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal16" alt="Item 16">
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/17.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal17" alt="Item 17">
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <img src="assets/item/18.jpg" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal18" alt="Item 18">
-        </div>
-      </div>
+        <p class="m-0 text-center text-white">
+            <span class="lang-bm">© 2025 Kedai Kraft Tangan. Semua hak cipta terpelihara.</span>
+            <span class="lang-en d-none">© 2025 Handicraft Shop. All rights reserved.</span>
+            <span class="lang-cn d-none">© 2025 手工艺店。版权所有。</span>
+        </p>
     </div>
-  </section>
+</footer>
 
-  <!-- Modals for Items 1–18 -->
-  <!-- ITEM 1 -->
-  <div class="modal fade" id="imageModal1" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/1.jpg" class="modal-img" alt="Item 1">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ITEM 2 -->
-  <div class="modal fade" id="imageModal2" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/2.jpg" class="modal-img" alt="Item 2">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ITEM 3 -->
-  <div class="modal fade" id="imageModal3" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/3.jpg" class="modal-img" alt="Item 3">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ITEM 4 -->
-  <div class="modal fade" id="imageModal4" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/4.jpg" class="modal-img" alt="Item 4">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ITEM 5 -->
-  <div class="modal fade" id="imageModal5" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/5.jpg" class="modal-img" alt="Item 5">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ITEM 6 -->
-  <div class="modal fade" id="imageModal6" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/6.jpg" class="modal-img" alt="Item 6">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ITEM 7 -->
-  <div class="modal fade" id="imageModal7" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/7.jpg" class="modal-img" alt="Item 7">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ITEM 8 -->
-  <div class="modal fade" id="imageModal8" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/8.jpg" class="modal-img" alt="Item 8">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ITEM 9 -->
-  <div class="modal fade" id="imageModal9" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/9.jpg" class="modal-img" alt="Item 9">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ITEM 10 -->
-  <div class="modal fade" id="imageModal10" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/10.jpg" class="modal-img" alt="Item 10">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ITEM 11 -->
-  <div class="modal fade" id="imageModal11" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/11.jpg" class="modal-img" alt="Item 11">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ITEM 12 -->
-  <div class="modal fade" id="imageModal12" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/12.jpg" class="modal-img" alt="Item 12">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ITEM 13 -->
-  <div class="modal fade" id="imageModal13" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/13.jpg" class="modal-img" alt="Item 13">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ITEM 14 -->
-  <div class="modal fade" id="imageModal14" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/14.jpg" class="modal-img" alt="Item 14">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ITEM 15 -->
-  <div class="modal fade" id="imageModal15" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/15.jpg" class="modal-img" alt="Item 15">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ITEM 16 -->
-  <div class="modal fade" id="imageModal16" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/16.jpg" class="modal-img" alt="Item 16">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ITEM 17 -->
-  <div class="modal fade" id="imageModal17" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/17.jpg" class="modal-img" alt="Item 17">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ITEM 18 -->
-  <div class="modal fade" id="imageModal18" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0">
-        <div class="modal-body p-0">
-          <img src="assets/item/18.jpg" class="modal-img" alt="Item 18">
-        </div>
-        <div class="modal-footer justify-content-center border-0">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const langDropdown = document.getElementById("langDropdown");
+const langOptions = document.querySelectorAll(".lang-select");
+const whatsappLink = document.getElementById("whatsappLink");
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+function setLanguage(lang) {
+    document.querySelectorAll(".lang-bm, .lang-en, .lang-cn").forEach(el => el.classList.add("d-none"));
+    document.querySelectorAll(".lang-" + lang).forEach(el => el.classList.remove("d-none"));
+    langDropdown.textContent = lang.toUpperCase() === "CN" ? "中文" : lang.toUpperCase();
+    localStorage.setItem("selectedLang", lang);
+
+    const msg = {
+        bm: "Hi, saya berminat dengan produk kraft tangan anda",
+        en: "Hi, I'm interested in your handicraft products",
+        cn: "你好，我对您的手工艺品感兴趣"
+    };
+    whatsappLink.href = `https://wa.me/60128169367?text=${encodeURIComponent(msg[lang])}`;
+}
+
+langOptions.forEach(option => {
+    option.addEventListener("click", (e) => {
+        e.preventDefault();
+        setLanguage(option.dataset.lang);
+    });
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("selectedLang") || "bm";
+    setLanguage(savedLang);
+});
+</script>
 </body>
 </html>
