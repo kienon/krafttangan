@@ -7,107 +7,116 @@
   <title>Kedai Kraft Tangan</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .card-img-top {
+      width: 100%;
+      height: 250px; /* tinggi sama rata */
+      object-fit: cover; /* crop gambar supaya full */
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
     <div class="container px-4 px-lg-5">
-      <a class="navbar-brand fw-bold" href="#">
-        <span class="lang-bm">Kedai Kraft Tangan</span>
-        <span class="lang-en d-none">Handicraft Shop</span>
-        <span class="lang-cn d-none">手工艺店</span>
-      </a>
+      <a class="navbar-brand fw-bold" href="#">Kedai Kraft Tangan</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active lang-bm" href="#">Laman Utama</a>
-            <a class="nav-link active lang-en d-none" href="#">Home</a>
-            <a class="nav-link active lang-cn d-none" href="#">首页</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link lang-bm" href="#products">Produk</a>
-            <a class="nav-link lang-en d-none" href="#products">Products</a>
-            <a class="nav-link lang-cn d-none" href="#products">产品</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link lang-bm" href="#contact">Hubungi Kami</a>
-            <a class="nav-link lang-en d-none" href="#contact">Contact Us</a>
-            <a class="nav-link lang-cn d-none" href="#contact">联系我们</a>
-          </li>
+          <li class="nav-item"><a class="nav-link active" href="#">Laman Utama</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Hubungi Kami</a></li>
         </ul>
-
-        <!-- Language Dropdown -->
-        <div class="dropdown ms-3">
-          <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-            BM
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="langDropdown">
-            <li><a class="dropdown-item lang-select" data-lang="bm" href="#">BM</a></li>
-            <li><a class="dropdown-item lang-select" data-lang="en" href="#">EN</a></li>
-            <li><a class="dropdown-item lang-select" data-lang="cn" href="#">中文</a></li>
-          </ul>
-        </div>
       </div>
     </div>
   </nav>
 
   <!-- Header-->
   <header class="bg-dark py-5">
-    <div class="container px-4 px-lg-5 my-5">
-      <div class="text-center text-white">
-        <h1 class="display-4 fw-bolder">
-          <span class="lang-bm">Koleksi Kraft Tangan</span>
-          <span class="lang-en d-none">Handicraft Collection</span>
-          <span class="lang-cn d-none">手工艺品收藏</span>
-        </h1>
-        <p class="lead fw-normal text-white-50 mb-0">
-          <span class="lang-bm">Produk unik & harga istimewa di kedai kami</span>
-          <span class="lang-en d-none">Unique products & special prices at our store</span>
-          <span class="lang-cn d-none">独特产品与特别优惠价格</span>
-        </p>
-      </div>
+    <div class="container text-center text-white">
+      <h1 class="display-4 fw-bolder">Koleksi Kraft Tangan</h1>
+      <p class="lead fw-normal text-white-50 mb-0">Produk unik & harga istimewa di kedai kami</p>
     </div>
   </header>
 
   <!-- Promosi -->
   <section class="py-5 bg-light">
-    <div class="container px-4 px-lg-5 text-center">
+    <div class="container text-center">
       <div class="alert alert-success shadow-sm" role="alert">
-        <h4 class="alert-heading fw-bold">
-          <i class="bi bi-stars me-2"></i>
-          <span class="lang-bm">Promosi Borong!</span>
-          <span class="lang-en d-none">Wholesale Promotion!</span>
-          <span class="lang-cn d-none">批发促销！</span>
-        </h4>
-        <p class="mb-1">
-          <span class="lang-bm">🎉 Dapatkan <strong>harga lebih murah</strong> bila beli 20 unit ke atas.</span>
-          <span class="lang-en d-none">🎉 Enjoy <strong>lower prices</strong> when you buy 20 units or more.</span>
-          <span class="lang-cn d-none">🎉 购买20件或以上可享<strong>更低价格</strong>。</span>
-        </p>
+        <h4 class="alert-heading fw-bold"><i class="bi bi-stars me-2"></i>Promosi Borong!</h4>
+        <p>🎉 Dapatkan <strong>harga lebih murah</strong> bila beli 20 unit ke atas.</p>
       </div>
     </div>
   </section>
 
   <!-- Products -->
   <section class="py-5 bg-white" id="products">
-    <div class="container px-4 px-lg-5">
+    <div class="container">
       <div class="text-center mb-5">
-        <h2 class="fw-bold">
-          <span class="lang-bm">Galeri Produk</span>
-          <span class="lang-en d-none">Product Gallery</span>
-          <span class="lang-cn d-none">产品画廊</span>
-        </h2>
-        <p class="text-muted">
-          <span class="lang-bm">Koleksi kraft tangan unik kami. Harga borong lebih murah.</span>
-          <span class="lang-en d-none">Our unique handicraft collection. Wholesale prices available.</span>
-          <span class="lang-cn d-none">我们的独特手工艺品系列。提供批发价格。</span>
-        </p>
+        <h2 class="fw-bold">Galeri Produk</h2>
+        <p class="text-muted">Koleksi kraft tangan unik kami. Harga borong lebih murah.</p>
       </div>
-      <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="productGallery">
-        <!-- JS akan generate 18 style bag di sini -->
+      <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+        <!-- 18 Items -->
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="assets/item/1.jpg" class="card-img-top" alt="Style Bag 1">
+            <div class="card-body text-center">
+              <h5 class="fw-bold">Style Bag 1</h5>
+              <p class="mb-1">RM50.00 / unit</p>
+              <small class="text-success">Borong 20+ pcs: RM45.00</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="assets/item/2.jpg" class="card-img-top" alt="Style Bag 2">
+            <div class="card-body text-center">
+              <h5 class="fw-bold">Style Bag 2</h5>
+              <p class="mb-1">RM50.00 / unit</p>
+              <small class="text-success">Borong 20+ pcs: RM45.00</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repeat same structure up to Style Bag 18 -->
+        <div class="col"><div class="card h-100 shadow-sm border-0"><img src="assets/item/3.jpg" class="card-img-top" alt="Style Bag 3"><div class="card-body text-center"><h5 class="fw-bold">Style Bag 3</h5><p class="mb-1">RM50.00 / unit</p><small class="text-success">Borong 20+ pcs: RM45.00</small></div></div></div>
+
+        <div class="col"><div class="card h-100 shadow-sm border-0"><img src="assets/item/4.jpg" class="card-img-top" alt="Style Bag 4"><div class="card-body text-center"><h5 class="fw-bold">Style Bag 4</h5><p class="mb-1">RM50.00 / unit</p><small class="text-success">Borong 20+ pcs: RM45.00</small></div></div></div>
+
+        <div class="col"><div class="card h-100 shadow-sm border-0"><img src="assets/item/5.jpg" class="card-img-top" alt="Style Bag 5"><div class="card-body text-center"><h5 class="fw-bold">Style Bag 5</h5><p class="mb-1">RM50.00 / unit</p><small class="text-success">Borong 20+ pcs: RM45.00</small></div></div></div>
+
+        <div class="col"><div class="card h-100 shadow-sm border-0"><img src="assets/item/6.jpg" class="card-img-top" alt="Style Bag 6"><div class="card-body text-center"><h5 class="fw-bold">Style Bag 6</h5><p class="mb-1">RM50.00 / unit</p><small class="text-success">Borong 20+ pcs: RM45.00</small></div></div></div>
+
+        <div class="col"><div class="card h-100 shadow-sm border-0"><img src="assets/item/7.jpg" class="card-img-top" alt="Style Bag 7"><div class="card-body text-center"><h5 class="fw-bold">Style Bag 7</h5><p class="mb-1">RM50.00 / unit</p><small class="text-success">Borong 20+ pcs: RM45.00</small></div></div></div>
+
+        <div class="col"><div class="card h-100 shadow-sm border-0"><img src="assets/item/8.jpg" class="card-img-top" alt="Style Bag 8"><div class="card-body text-center"><h5 class="fw-bold">Style Bag 8</h5><p class="mb-1">RM50.00 / unit</p><small class="text-success">Borong 20+ pcs: RM45.00</small></div></div></div>
+
+        <div class="col"><div class="card h-100 shadow-sm border-0"><img src="assets/item/9.jpg" class="card-img-top" alt="Style Bag 9"><div class="card-body text-center"><h5 class="fw-bold">Style Bag 9</h5><p class="mb-1">RM50.00 / unit</p><small class="text-success">Borong 20+ pcs: RM45.00</small></div></div></div>
+
+        <div class="col"><div class="card h-100 shadow-sm border-0"><img src="assets/item/10.jpg" class="card-img-top" alt="Style Bag 10"><div class="card-body text-center"><h5 class="fw-bold">Style Bag 10</h5><p class="mb-1">RM50.00 / unit</p><small class="text-success">Borong 20+ pcs: RM45.00</small></div></div></div>
+
+        <div class="col"><div class="card h-100 shadow-sm border-0"><img src="assets/item/11.jpg" class="card-img-top" alt="Style Bag 11"><div class="card-body text-center"><h5 class="fw-bold">Style Bag 11</h5><p class="mb-1">RM50.00 / unit</p><small class="text-success">Borong 20+ pcs: RM45.00</small></div></div></div>
+
+        <div class="col"><div class="card h-100 shadow-sm border-0"><img src="assets/item/12.jpg" class="card-img-top" alt="Style Bag 12"><div class="card-body text-center"><h5 class="fw-bold">Style Bag 12</h5><p class="mb-1">RM50.00 / unit</p><small class="text-success">Borong 20+ pcs: RM45.00</small></div></div></div>
+
+        <div class="col"><div class="card h-100 shadow-sm border-0"><img src="assets/item/13.jpg" class="card-img-top" alt="Style Bag 13"><div class="card-body text-center"><h5 class="fw-bold">Style Bag 13</h5><p class="mb-1">RM50.00 / unit</p><small class="text-success">Borong 20+ pcs: RM45.00</small></div></div></div>
+
+        <div class="col"><div class="card h-100 shadow-sm border-0"><img src="assets/item/14.jpg" class="card-img-top" alt="Style Bag 14"><div class="card-body text-center"><h5 class="fw-bold">Style Bag 14</h5><p class="mb-1">RM50.00 / unit</p><small class="text-success">Borong 20+ pcs: RM45.00</small></div></div></div>
+
+        <div class="col"><div class="card h-100 shadow-sm border-0"><img src="assets/item/15.jpg" class="card-img-top" alt="Style Bag 15"><div class="card-body text-center"><h5 class="fw-bold">Style Bag 15</h5><p class="mb-1">RM50.00 / unit</p><small class="text-success">Borong 20+ pcs: RM45.00</small></div></div></div>
+
+        <div class="col"><div class="card h-100 shadow-sm border-0"><img src="assets/item/16.jpg" class="card-img-top" alt="Style Bag 16"><div class="card-body text-center"><h5 class="fw-bold">Style Bag 16</h5><p class="mb-1">RM50.00 / unit</p><small class="text-success">Borong 20+ pcs: RM45.00</small></div></div></div>
+
+        <div class="col"><div class="card h-100 shadow-sm border-0"><img src="assets/item/17.jpg" class="card-img-top" alt="Style Bag 17"><div class="card-body text-center"><h5 class="fw-bold">Style Bag 17</h5><p class="mb-1">RM50.00 / unit</p><small class="text-success">Borong 20+ pcs: RM45.00</small></div></div></div>
+
+        <div class="col"><div class="card h-100 shadow-sm border-0"><img src="assets/item/18.jpg" class="card-img-top" alt="Style Bag 18"><div class="card-body text-center"><h5 class="fw-bold">Style Bag 18</h5><p class="mb-1">RM50.00 / unit</p><small class="text-success">Borong 20+ pcs: RM45.00</small></div></div></div>
+
       </div>
     </div>
   </section>
@@ -116,32 +125,19 @@
   <section class="py-5 bg-light" id="contact">
     <div class="container">
       <div class="text-center mb-4">
-        <h2 class="section-heading text-uppercase">
-          <span class="lang-bm">Hubungi Kami</span>
-          <span class="lang-en d-none">Contact Us</span>
-          <span class="lang-cn d-none">联系我们</span>
-        </h2>
-        <p class="section-subheading text-muted">
-          <span class="lang-bm">Kunjungi kedai atau hubungi kami untuk pertanyaan</span>
-          <span class="lang-en d-none">Visit our shop or contact us for inquiries</span>
-          <span class="lang-cn d-none">欢迎光临或联系我们了解更多</span>
-        </p>
+        <h2 class="section-heading text-uppercase">Hubungi Kami</h2>
+        <p class="section-subheading text-muted">Kunjungi kedai atau hubungi kami untuk pertanyaan</p>
       </div>
-
       <div class="row justify-content-center">
         <div class="col-lg-10 mb-4">
           <div class="ratio ratio-16x9 shadow-sm">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.375274450167!2d116.08155300000001!3d5.942908000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x323b6850a335db7f%3A0x98f9242f6dbb0613!2sSyarikat%20Eng%20Tuck!5e0!3m2!1sms!2smy!4v1761203221838!5m2!1sms!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
       </div>
-
       <div class="text-center">
-        <a id="whatsappLink" href="#" target="_blank" class="btn btn-success btn-lg shadow">
-          <i class="bi bi-whatsapp me-2"></i>
-          <span class="lang-bm">Chat via WhatsApp</span>
-          <span class="lang-en d-none">Chat via WhatsApp</span>
-          <span class="lang-cn d-none">通过 WhatsApp 聊天</span>
+        <a href="https://wa.me/60128169367" target="_blank" class="btn btn-success btn-lg shadow">
+          <i class="bi bi-whatsapp me-2"></i> Chat via WhatsApp
         </a>
       </div>
     </div>
@@ -150,63 +146,10 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">
-        <span class="lang-bm">© 2025 Kedai Kraft Tangan. Semua hak cipta terpelihara.</span>
-        <span class="lang-en d-none">© 2025 Handicraft Shop. All rights reserved.</span>
-        <span class="lang-cn d-none">© 2025 手工艺店。版权所有。</span>
-      </p>
+      <p class="m-0 text-center text-white">© 2025 Kedai Kraft Tangan. Semua hak cipta terpelihara.</p>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Language switch
-    const langDropdown = document.getElementById("langDropdown");
-    const langOptions = document.querySelectorAll(".lang-select");
-    const whatsappLink = document.getElementById("whatsappLink");
-
-    function setLanguage(lang) {
-      document.querySelectorAll(".lang-bm, .lang-en, .lang-cn").forEach(el => el.classList.add("d-none"));
-      document.querySelectorAll(".lang-" + lang).forEach(el => el.classList.remove("d-none"));
-      langDropdown.textContent = lang.toUpperCase() === "CN" ? "中文" : lang.toUpperCase();
-      localStorage.setItem("selectedLang", lang);
-
-      const msg = {
-        bm: "Hi, saya berminat dengan produk kraft tangan anda",
-        en: "Hi, I'm interested in your handicraft products",
-        cn: "你好，我对您的手工艺品感兴趣"
-      };
-      whatsappLink.href = `https://wa.me/60128169367?text=${encodeURIComponent(msg[lang])}`;
-    }
-
-    langOptions.forEach(option => {
-      option.addEventListener("click", (e) => {
-        e.preventDefault();
-        setLanguage(option.dataset.lang);
-      });
-    });
-
-    window.addEventListener("DOMContentLoaded", () => {
-      const savedLang = localStorage.getItem("selectedLang") || "bm";
-      setLanguage(savedLang);
-
-      // Generate 18 Style Bags dynamically
-      const gallery = document.getElementById("productGallery");
-      for(let i=1; i<=18; i++){
-        const col = document.createElement("div");
-        col.className = "col";
-        col.innerHTML = `
-          <div class="card h-100 shadow-sm border-0">
-            <img src="assets/item/${i}.jpg" class="card-img-top" alt="Style Bag ${i}">
-            <div class="card-body text-center">
-              <h5 class="fw-bold">Style Bag ${i}</h5>
-              <p class="mb-1">RM50.00 / unit</p>
-              <small class="text-success">Borong 20+ pcs: RM45.00</small>
-            </div>
-          </div>`;
-        gallery.appendChild(col);
-      }
-    });
-  </script>
 </body>
 </html>
