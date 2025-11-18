@@ -1,215 +1,557 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Kraft tangan unik & harga mampu milik" />
-    <title>Kedai Kraft Tangan</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="Kraft tangan unik & harga mampu milik" />
+<title>Kedai Kraft Tangan</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+.card-img-top {
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.card-img-top:hover {
+  transform: scale(1.05);
+}
+</style>
 </head>
 <body>
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-    <div class="container px-4 px-lg-5">
-        <a class="navbar-brand fw-bold" href="#">
-            <span class="lang-bm">Kedai Kraft Tangan</span>
-            <span class="lang-en d-none">Handicraft Shop</span>
-            <span class="lang-cn d-none">手工艺店</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active lang-bm" href="#">Laman Utama</a>
-                    <a class="nav-link active lang-en d-none" href="#">Home</a>
-                    <a class="nav-link active lang-cn d-none" href="#">首页</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link lang-bm" href="#products">Produk</a>
-                    <a class="nav-link lang-en d-none" href="#products">Products</a>
-                    <a class="nav-link lang-cn d-none" href="#products">产品</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link lang-bm" href="#contact">Hubungi Kami</a>
-                    <a class="nav-link lang-en d-none" href="#contact">Contact Us</a>
-                    <a class="nav-link lang-cn d-none" href="#contact">联系我们</a>
-                </li>
-            </ul>
-            <!-- Language Dropdown -->
-            <div class="dropdown ms-3">
-                <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">BM</button>
-                <ul class="dropdown-menu" aria-labelledby="langDropdown">
-                    <li><a class="dropdown-item lang-select" data-lang="bm" href="#">BM</a></li>
-                    <li><a class="dropdown-item lang-select" data-lang="en" href="#">EN</a></li>
-                    <li><a class="dropdown-item lang-select" data-lang="cn" href="#">中文</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<div class="container px-4 px-lg-5">
+<a class="navbar-brand fw-bold" href="#">
+<span class="lang-bm">Kedai Kraft Tangan</span>
+<span class="lang-en d-none">Handicraft Shop</span>
+<span class="lang-cn d-none">手工艺店</span>
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+<li class="nav-item">
+<a class="nav-link active lang-bm" href="#">Laman Utama</a>
+<a class="nav-link active lang-en d-none" href="#">Home</a>
+<a class="nav-link active lang-cn d-none" href="#">首页</a>
+</li>
+<li class="nav-item">
+<a class="nav-link lang-bm" href="#products">Produk</a>
+<a class="nav-link lang-en d-none" href="#products">Products</a>
+<a class="nav-link lang-cn d-none" href="#products">产品</a>
+</li>
+<li class="nav-item">
+<a class="nav-link lang-bm" href="#contact">Hubungi Kami</a>
+<a class="nav-link lang-en d-none" href="#contact">Contact Us</a>
+<a class="nav-link lang-cn d-none" href="#contact">联系我们</a>
+</li>
+</ul>
+<!-- Language Dropdown -->
+<div class="dropdown ms-3">
+<button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+BM
+</button>
+<ul class="dropdown-menu" aria-labelledby="langDropdown">
+<li><a class="dropdown-item lang-select" data-lang="bm" href="#">BM</a></li>
+<li><a class="dropdown-item lang-select" data-lang="en" href="#">EN</a></li>
+<li><a class="dropdown-item lang-select" data-lang="cn" href="#">中文</a></li>
+</ul>
+</div>
+</div>
+</div>
 </nav>
 
 <!-- Header-->
 <header class="bg-dark py-5">
-    <div class="container px-4 px-lg-5 my-5">
-        <div class="text-center text-white">
-            <h1 class="display-4 fw-bolder">
-                <span class="lang-bm">Koleksi Kraft Tangan</span>
-                <span class="lang-en d-none">Handicraft Collection</span>
-                <span class="lang-cn d-none">手工艺品收藏</span>
-            </h1>
-            <p class="lead fw-normal text-white-50 mb-0">
-                <span class="lang-bm">Produk unik & harga istimewa di kedai kami</span>
-                <span class="lang-en d-none">Unique products & special prices at our store</span>
-                <span class="lang-cn d-none">独特产品与特别优惠价格</span>
-            </p>
-        </div>
-    </div>
+<div class="container px-4 px-lg-5 my-5">
+<div class="text-center text-white">
+<h1 class="display-4 fw-bolder">
+<span class="lang-bm">Koleksi Kraft Tangan</span>
+<span class="lang-en d-none">Handicraft Collection</span>
+<span class="lang-cn d-none">手工艺品收藏</span>
+</h1>
+<p class="lead fw-normal text-white-50 mb-0">
+<span class="lang-bm">Produk unik & harga istimewa di kedai kami</span>
+<span class="lang-en d-none">Unique products & special prices at our store</span>
+<span class="lang-cn d-none">独特产品与特别优惠价格</span>
+</p>
+</div>
+</div>
 </header>
 
 <!-- Promosi -->
 <section class="py-5 bg-light">
-    <div class="container px-4 px-lg-5 text-center">
-        <div class="alert alert-success shadow-sm" role="alert">
-            <h4 class="alert-heading fw-bold">
-                <i class="bi bi-stars me-2"></i>
-                <span class="lang-bm">Promosi Borong!</span>
-                <span class="lang-en d-none">Wholesale Promotion!</span>
-                <span class="lang-cn d-none">批发促销！</span>
-            </h4>
-            <p class="mb-1">
-                <span class="lang-bm">🎉 Dapatkan <strong>harga lebih murah</strong> bila beli 20 unit ke atas.</span>
-                <span class="lang-en d-none">🎉 Enjoy <strong>lower prices</strong> when you buy 20 units or more.</span>
-                <span class="lang-cn d-none">🎉 购买20件或以上可享<strong>更低价格</strong>。</span>
-            </p>
-            <p class="mb-0">
-                <span class="lang-bm">Contoh: Anyaman Rotan RM40 → <span class="fw-bold text-success">RM35</span> (20+ pcs)</span>
-                <span class="lang-en d-none">Example: Rattan Weaving RM40 → <span class="fw-bold text-success">RM35</span> (20+ pcs)</span>
-                <span class="lang-cn d-none">示例：藤编 RM40 → <span class="fw-bold text-success">RM35</span>（20件以上）</span>
-            </p>
-        </div>
-    </div>
+<div class="container px-4 px-lg-5 text-center">
+<div class="alert alert-success shadow-sm" role="alert">
+<h4 class="alert-heading fw-bold">
+<i class="bi bi-stars me-2"></i>
+<span class="lang-bm">Promosi Borong!</span>
+<span class="lang-en d-none">Wholesale Promotion!</span>
+<span class="lang-cn d-none">批发促销！</span>
+</h4>
+<p class="mb-1">
+<span class="lang-bm">🎉 Dapatkan <strong>harga lebih murah</strong> bila beli 20 unit ke atas.</span>
+<span class="lang-en d-none">🎉 Enjoy <strong>lower prices</strong> when you buy 20 units or more.</span>
+<span class="lang-cn d-none">🎉 购买20件或以上可享<strong>更低价格</strong>。</span>
+</p>
+<p class="mb-0">
+<span class="lang-bm">Contoh: Style Bag RM50 → <span class="fw-bold text-success">RM45</span> (20+ pcs)</span>
+<span class="lang-en d-none">Example: Style Bag RM50 → <span class="fw-bold text-success">RM45</span> (20+ pcs)</span>
+<span class="lang-cn d-none">示例：款式包 RM50 → <span class="fw-bold text-success">RM45</span>（20件以上）</span>
+</p>
+</div>
+</div>
 </section>
 
 <!-- Products -->
 <section class="py-5 bg-white" id="products">
-    <div class="container px-4 px-lg-5">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">
-                <span class="lang-bm">Galeri Produk</span>
-                <span class="lang-en d-none">Product Gallery</span>
-                <span class="lang-cn d-none">产品画廊</span>
-            </h2>
-            <p class="text-muted">
-                <span class="lang-bm">Koleksi kraft tangan unik kami. Harga borong lebih murah.</span>
-                <span class="lang-en d-none">Our unique handicraft collection. Wholesale prices available.</span>
-                <span class="lang-cn d-none">我们的独特手工艺品系列。提供批发价格。</span>
-            </p>
-        </div>
-        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-            <!-- Loop Produk 1-18 -->
-            <!-- Format Produk -->
-            <!-- ubah src gambar dan harga borong mengikut keperluan -->
-            ${Array.from({length: 18}).map((_, i) => `
-            <div class="col">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="assets/item/${i+1}.jpg" class="card-img-top" alt="Produk ${i+1}">
-                    <div class="card-body text-center">
-                        <h5 class="fw-bold">
-                            <span class="lang-bm">Produk ${i+1}</span>
-                            <span class="lang-en d-none">Product ${i+1}</span>
-                            <span class="lang-cn d-none">产品 ${i+1}</span>
-                        </h5>
-                        <p class="mb-1">RM${(20+i*5).toFixed(2)} / unit</p>
-                        <small class="text-success">
-                            <span class="lang-bm">Borong 20+ pcs: RM${(15+i*4).toFixed(2)}</span>
-                            <span class="lang-en d-none">Wholesale 20+ pcs: RM${(15+i*4).toFixed(2)}</span>
-                            <span class="lang-cn d-none">批发20件以上：RM${(15+i*4).toFixed(2)}</span>
-                        </small>
-                    </div>
-                </div>
-            </div>
-            `).join('')}
-        </div>
-    </div>
+<div class="container px-4 px-lg-5">
+<div class="text-center mb-5">
+<h2 class="fw-bold">
+<span class="lang-bm">Galeri Produk</span>
+<span class="lang-en d-none">Product Gallery</span>
+<span class="lang-cn d-none">产品画廊</span>
+</h2>
+<p class="text-muted">
+<span class="lang-bm">Koleksi kraft tangan unik kami. Harga borong lebih murah.</span>
+<span class="lang-en d-none">Our unique handicraft collection. Wholesale prices available.</span>
+<span class="lang-cn d-none">我们的独特手工艺品系列。提供批发价格。</span>
+</p>
+</div>
+<div class="row gx-4 gx-lg-5 row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+<!-- Produk 1 sampai 18 -->
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/1.jpg" target="_blank"><img src="assets/item/1.jpg" class="card-img-top" alt="Style Bag 1"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 1</span>
+<span class="lang-en d-none">Style Bag 1</span>
+<span class="lang-cn d-none">款式包 1</span>
+</h5>
+<p class="mb-1">RM50.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM45.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM45.00</span>
+<span class="lang-cn d-none">批发20件以上：RM45.00</span>
+</small>
+</div>
+</div>
+</div>
+
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/2.jpg" target="_blank"><img src="assets/item/2.jpg" class="card-img-top" alt="Style Bag 2"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 2</span>
+<span class="lang-en d-none">Style Bag 2</span>
+<span class="lang-cn d-none">款式包 2</span>
+</h5>
+<p class="mb-1">RM52.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM47.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM47.00</span>
+<span class="lang-cn d-none">批发20件以上：RM47.00</span>
+</small>
+</div>
+</div>
+</div>
+
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/3.jpg" target="_blank"><img src="assets/item/3.jpg" class="card-img-top" alt="Style Bag 3"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 3</span>
+<span class="lang-en d-none">Style Bag 3</span>
+<span class="lang-cn d-none">款式包 3</span>
+</h5>
+<p class="mb-1">RM55.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM50.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM50.00</span>
+<span class="lang-cn d-none">批发20件以上：RM50.00</span>
+</small>
+</div>
+</div>
+</div>
+
+<!-- Produk 4 -->
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/4.jpg" target="_blank"><img src="assets/item/4.jpg" class="card-img-top" alt="Style Bag 4"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 4</span>
+<span class="lang-en d-none">Style Bag 4</span>
+<span class="lang-cn d-none">款式包 4</span>
+</h5>
+<p class="mb-1">RM57.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM52.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM52.00</span>
+<span class="lang-cn d-none">批发20件以上：RM52.00</span>
+</small>
+</div>
+</div>
+</div>
+
+<!-- Produk 5 -->
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/5.jpg" target="_blank"><img src="assets/item/5.jpg" class="card-img-top" alt="Style Bag 5"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 5</span>
+<span class="lang-en d-none">Style Bag 5</span>
+<span class="lang-cn d-none">款式包 5</span>
+</h5>
+<p class="mb-1">RM60.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM55.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM55.00</span>
+<span class="lang-cn d-none">批发20件以上：RM55.00</span>
+</small>
+</div>
+</div>
+</div>
+
+<!-- Produk 6 -->
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/6.jpg" target="_blank"><img src="assets/item/6.jpg" class="card-img-top" alt="Style Bag 6"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 6</span>
+<span class="lang-en d-none">Style Bag 6</span>
+<span class="lang-cn d-none">款式包 6</span>
+</h5>
+<p class="mb-1">RM62.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM57.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM57.00</span>
+<span class="lang-cn d-none">批发20件以上：RM57.00</span>
+</small>
+</div>
+</div>
+</div>
+
+<!-- Produk 7 -->
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/7.jpg" target="_blank"><img src="assets/item/7.jpg" class="card-img-top" alt="Style Bag 7"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 7</span>
+<span class="lang-en d-none">Style Bag 7</span>
+<span class="lang-cn d-none">款式包 7</span>
+</h5>
+<p class="mb-1">RM65.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM60.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM60.00</span>
+<span class="lang-cn d-none">批发20件以上：RM60.00</span>
+</small>
+</div>
+</div>
+</div>
+
+<!-- Produk 8 -->
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/8.jpg" target="_blank"><img src="assets/item/8.jpg" class="card-img-top" alt="Style Bag 8"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 8</span>
+<span class="lang-en d-none">Style Bag 8</span>
+<span class="lang-cn d-none">款式包 8</span>
+</h5>
+<p class="mb-1">RM67.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM62.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM62.00</span>
+<span class="lang-cn d-none">批发20件以上：RM62.00</span>
+</small>
+</div>
+</div>
+</div>
+
+<!-- Produk 9 -->
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/9.jpg" target="_blank"><img src="assets/item/9.jpg" class="card-img-top" alt="Style Bag 9"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 9</span>
+<span class="lang-en d-none">Style Bag 9</span>
+<span class="lang-cn d-none">款式包 9</span>
+</h5>
+<p class="mb-1">RM70.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM65.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM65.00</span>
+<span class="lang-cn d-none">批发20件以上：RM65.00</span>
+</small>
+</div>
+</div>
+</div>
+
+<!-- Produk 10 -->
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/10.jpg" target="_blank"><img src="assets/item/10.jpg" class="card-img-top" alt="Style Bag 10"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 10</span>
+<span class="lang-en d-none">Style Bag 10</span>
+<span class="lang-cn d-none">款式包 10</span>
+</h5>
+<p class="mb-1">RM72.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM67.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM67.00</span>
+<span class="lang-cn d-none">批发20件以上：RM67.00</span>
+</small>
+</div>
+</div>
+</div>
+
+<!-- Produk 11 -->
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/11.jpg" target="_blank"><img src="assets/item/11.jpg" class="card-img-top" alt="Style Bag 11"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 11</span>
+<span class="lang-en d-none">Style Bag 11</span>
+<span class="lang-cn d-none">款式包 11</span>
+</h5>
+<p class="mb-1">RM75.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM70.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM70.00</span>
+<span class="lang-cn d-none">批发20件以上：RM70.00</span>
+</small>
+</div>
+</div>
+</div>
+
+<!-- Produk 12 -->
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/12.jpg" target="_blank"><img src="assets/item/12.jpg" class="card-img-top" alt="Style Bag 12"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 12</span>
+<span class="lang-en d-none">Style Bag 12</span>
+<span class="lang-cn d-none">款式包 12</span>
+</h5>
+<p class="mb-1">RM77.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM72.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM72.00</span>
+<span class="lang-cn d-none">批发20件以上：RM72.00</span>
+</small>
+</div>
+</div>
+</div>
+
+<!-- Produk 13 -->
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/13.jpg" target="_blank"><img src="assets/item/13.jpg" class="card-img-top" alt="Style Bag 13"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 13</span>
+<span class="lang-en d-none">Style Bag 13</span>
+<span class="lang-cn d-none">款式包 13</span>
+</h5>
+<p class="mb-1">RM80.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM75.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM75.00</span>
+<span class="lang-cn d-none">批发20件以上：RM75.00</span>
+</small>
+</div>
+</div>
+</div>
+
+<!-- Produk 14 -->
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/14.jpg" target="_blank"><img src="assets/item/14.jpg" class="card-img-top" alt="Style Bag 14"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 14</span>
+<span class="lang-en d-none">Style Bag 14</span>
+<span class="lang-cn d-none">款式包 14</span>
+</h5>
+<p class="mb-1">RM82.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM77.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM77.00</span>
+<span class="lang-cn d-none">批发20件以上：RM77.00</span>
+</small>
+</div>
+</div>
+</div>
+
+<!-- Produk 15 -->
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/15.jpg" target="_blank"><img src="assets/item/15.jpg" class="card-img-top" alt="Style Bag 15"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 15</span>
+<span class="lang-en d-none">Style Bag 15</span>
+<span class="lang-cn d-none">款式包 15</span>
+</h5>
+<p class="mb-1">RM85.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM80.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM80.00</span>
+<span class="lang-cn d-none">批发20件以上：RM80.00</span>
+</small>
+</div>
+</div>
+</div>
+
+<!-- Produk 16 -->
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/16.jpg" target="_blank"><img src="assets/item/16.jpg" class="card-img-top" alt="Style Bag 16"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 16</span>
+<span class="lang-en d-none">Style Bag 16</span>
+<span class="lang-cn d-none">款式包 16</span>
+</h5>
+<p class="mb-1">RM87.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM82.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM82.00</span>
+<span class="lang-cn d-none">批发20件以上：RM82.00</span>
+</small>
+</div>
+</div>
+</div>
+
+<!-- Produk 17 -->
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/17.jpg" target="_blank"><img src="assets/item/17.jpg" class="card-img-top" alt="Style Bag 17"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 17</span>
+<span class="lang-en d-none">Style Bag 17</span>
+<span class="lang-cn d-none">款式包 17</span>
+</h5>
+<p class="mb-1">RM90.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM85.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM85.00</span>
+<span class="lang-cn d-none">批发20件以上：RM85.00</span>
+</small>
+</div>
+</div>
+</div>
+
+<!-- Produk 18 -->
+<div class="col">
+<div class="card h-100 shadow-sm border-0">
+<a href="assets/item/18.jpg" target="_blank"><img src="assets/item/18.jpg" class="card-img-top" alt="Style Bag 18"></a>
+<div class="card-body text-center">
+<h5 class="fw-bold">
+<span class="lang-bm">Style Bag 18</span>
+<span class="lang-en d-none">Style Bag 18</span>
+<span class="lang-cn d-none">款式包 18</span>
+</h5>
+<p class="mb-1">RM92.00 / unit</p>
+<small class="text-success">
+<span class="lang-bm">Borong 20+ pcs: RM87.00</span>
+<span class="lang-en d-none">Wholesale 20+ pcs: RM87.00</span>
+<span class="lang-cn d-none">批发20件以上：RM87.00</span>
+</small>
+</div>
+</div>
+</div>
+
+</div>
+</div>
 </section>
 
 <!-- Contact -->
 <section class="py-5 bg-light" id="contact">
-    <div class="container">
-        <div class="text-center mb-4">
-            <h2 class="section-heading text-uppercase">
-                <span class="lang-bm">Hubungi Kami</span>
-                <span class="lang-en d-none">Contact Us</span>
-                <span class="lang-cn d-none">联系我们</span>
-            </h2>
-            <p class="section-subheading text-muted">
-                <span class="lang-bm">Kunjungi kedai atau hubungi kami untuk pertanyaan</span>
-                <span class="lang-en d-none">Visit our shop or contact us for inquiries</span>
-                <span class="lang-cn d-none">欢迎光临或联系我们了解更多</span>
-            </p>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-10 mb-4">
-                <div class="ratio ratio-16x9 shadow-sm">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.375274450167!2d116.08155300000001!3d5.942908000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x323b6850a335db7f%3A0x98f9242f6dbb0613!2sSyarikat%20Eng%20Tuck!5e0!3m2!1sms!2smy!4v1761203221838!5m2!1sms!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-        <div class="text-center">
-            <a id="whatsappLink" href="#" target="_blank" class="btn btn-success btn-lg shadow">
-                <i class="bi bi-whatsapp me-2"></i>
-                <span class="lang-bm">Chat via WhatsApp</span>
-                <span class="lang-en d-none">Chat via WhatsApp</span>
-                <span class="lang-cn d-none">通过 WhatsApp 聊天</span>
-            </a>
-        </div>
-    </div>
+<div class="container">
+<div class="text-center mb-4">
+<h2 class="section-heading text-uppercase">
+<span class="lang-bm">Hubungi Kami</span>
+<span class="lang-en d-none">Contact Us</span>
+<span class="lang-cn d-none">联系我们</span>
+</h2>
+<p class="section-subheading text-muted">
+<span class="lang-bm">Kunjungi kedai atau hubungi kami untuk pertanyaan</span>
+<span class="lang-en d-none">Visit our shop or contact us for inquiries</span>
+<span class="lang-cn d-none">欢迎光临或联系我们了解更多</span>
+</p>
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-10 mb-4">
+<div class="ratio ratio-16x9 shadow-sm">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.375274450167!2d116.08155300000001!3d5.942908000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x323b6850a335db7f%3A0x98f9242f6dbb0613!2sSyarikat%20Eng%20Tuck!5e0!3m2!1sms!2smy!4v1761203221838!5m2!1sms!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+</div>
+</div>
+<div class="text-center">
+<a id="whatsappLink" href="#" target="_blank" class="btn btn-success btn-lg shadow">
+<i class="bi bi-whatsapp me-2"></i>
+<span class="lang-bm">Chat via WhatsApp</span>
+<span class="lang-en d-none">Chat via WhatsApp</span>
+<span class="lang-cn d-none">通过 WhatsApp 聊天</span>
+</a>
+</div>
+</div>
 </section>
 
 <!-- Footer -->
 <footer class="py-5 bg-dark">
-    <div class="container">
-        <p class="m-0 text-center text-white">
-            <span class="lang-bm">© 2025 Kedai Kraft Tangan. Semua hak cipta terpelihara.</span>
-            <span class="lang-en d-none">© 2025 Handicraft Shop. All rights reserved.</span>
-            <span class="lang-cn d-none">© 2025 手工艺店。版权所有。</span>
-        </p>
-    </div>
+<div class="container">
+<p class="m-0 text-center text-white">
+<span class="lang-bm">© 2025 Kedai Kraft Tangan. Semua hak cipta terpelihara.</span>
+<span class="lang-en d-none">© 2025 Handicraft Shop. All rights reserved.</span>
+<span class="lang-cn d-none">© 2025 手工艺店。版权所有。</span>
+</p>
+</div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 const langDropdown = document.getElementById("langDropdown");
-const langOptions = document.querySelectorAll(".lang-select");
 const whatsappLink = document.getElementById("whatsappLink");
-
 function setLanguage(lang) {
-    document.querySelectorAll(".lang-bm, .lang-en, .lang-cn").forEach(el => el.classList.add("d-none"));
-    document.querySelectorAll(".lang-" + lang).forEach(el => el.classList.remove("d-none"));
-    langDropdown.textContent = lang.toUpperCase() === "CN" ? "中文" : lang.toUpperCase();
-    localStorage.setItem("selectedLang", lang);
-
-    const msg = {
-        bm: "Hi, saya berminat dengan produk kraft tangan anda",
-        en: "Hi, I'm interested in your handicraft products",
-        cn: "你好，我对您的手工艺品感兴趣"
-    };
-    whatsappLink.href = `https://wa.me/60128169367?text=${encodeURIComponent(msg[lang])}`;
+document.querySelectorAll(".lang-bm, .lang-en, .lang-cn").forEach(el => el.classList.add("d-none"));
+document.querySelectorAll(".lang-" + lang).forEach(el => el.classList.remove("d-none"));
+langDropdown.textContent = lang.toUpperCase() === "CN" ? "中文" : lang.toUpperCase();
+localStorage.setItem("selectedLang", lang);
+const msg = {
+bm: "Hi, saya berminat dengan produk kraft tangan anda",
+en: "Hi, I'm interested in your handicraft products",
+cn: "你好，我对您的手工艺品感兴趣"
+};
+whatsappLink.href = `https://wa.me/60128169367?text=${encodeURIComponent(msg[lang])}`;
 }
-
-langOptions.forEach(option => {
-    option.addEventListener("click", (e) => {
-        e.preventDefault();
-        setLanguage(option.dataset.lang);
-    });
+document.querySelectorAll(".lang-select").forEach(option => {
+option.addEventListener("click", e => {
+e.preventDefault();
+setLanguage(option.dataset.lang);
 });
-
+});
 window.addEventListener("DOMContentLoaded", () => {
-    const savedLang = localStorage.getItem("selectedLang") || "bm";
-    setLanguage(savedLang);
+const savedLang = localStorage.getItem("selectedLang") || "bm";
+setLanguage(savedLang);
 });
 </script>
 </body>
