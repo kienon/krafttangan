@@ -567,43 +567,48 @@ BM
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-  <script>
+<script>
 document.addEventListener("DOMContentLoaded", function() {
+    // Initialize GLightbox
     const lightbox = GLightbox({
         selector: '.glightbox',
         touchNavigation: true,
         loop: true,
         zoomable: true,
     });
+
+    // Language switcher
+    const langDropdown = document.getElementById("langDropdown");
+    const whatsappLink = document.getElementById("whatsappLink");
+
+    function setLanguage(lang) {
+        document.querySelectorAll(".lang-bm, .lang-en, .lang-cn").forEach(el => el.classList.add("d-none"));
+        document.querySelectorAll(".lang-" + lang).forEach(el => el.classList.remove("d-none"));
+        langDropdown.textContent = lang.toUpperCase() === "CN" ? "中文" : lang.toUpperCase();
+        localStorage.setItem("selectedLang", lang);
+
+        const msg = {
+            bm: "Hi, saya berminat dengan produk kraft tangan anda",
+            en: "Hi, I'm interested in your handicraft products",
+            cn: "你好，我对您的手工艺品感兴趣"
+        };
+        if (whatsappLink) {
+            whatsappLink.href = `https://wa.me/60128169367?text=${encodeURIComponent(msg[lang])}`;
+        }
+    }
+
+    document.querySelectorAll(".lang-select").forEach(option => {
+        option.addEventListener("click", e => {
+            e.preventDefault();
+            setLanguage(option.dataset.lang);
+        });
+    });
+
+    // Load saved language or default
+    const savedLang = localStorage.getItem("selectedLang") || "bm";
+    setLanguage(savedLang);
 });
 </script>
 
-<script>
-const lightbox = GLightbox({ selector: '.glightbox' });
-const langDropdown = document.getElementById("langDropdown");
-const whatsappLink = document.getElementById("whatsappLink");
-function setLanguage(lang) {
-document.querySelectorAll(".lang-bm, .lang-en, .lang-cn").forEach(el => el.classList.add("d-none"));
-document.querySelectorAll(".lang-" + lang).forEach(el => el.classList.remove("d-none"));
-langDropdown.textContent = lang.toUpperCase() === "CN" ? "中文" : lang.toUpperCase();
-localStorage.setItem("selectedLang", lang);
-const msg = {
-bm: "Hi, saya berminat dengan produk kraft tangan anda",
-en: "Hi, I'm interested in your handicraft products",
-cn: "你好，我对您的手工艺品感兴趣"
-};
-whatsappLink.href = `https://wa.me/60128169367?text=${encodeURIComponent(msg[lang])}`;
-}
-document.querySelectorAll(".lang-select").forEach(option => {
-option.addEventListener("click", e => {
-e.preventDefault();
-setLanguage(option.dataset.lang);
-});
-});
-window.addEventListener("DOMContentLoaded", () => {
-const savedLang = localStorage.getItem("selectedLang") || "bm";
-setLanguage(savedLang);
-});
-</script>
 </body>
 </html>
