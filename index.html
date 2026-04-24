@@ -590,21 +590,27 @@ document.addEventListener("DOMContentLoaded", function() {
     const langDropdown = document.getElementById("langDropdown");
 
     // ===== Floating Button Hide Logic =====
-    if (whatsappFloat && contactSection) {
+    const target = whatsappLink || contactSection;
+    let timeout;
+
+    if (whatsappFloat && target) {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        whatsappFloat.style.display = "none";
-                    } else {
-                        whatsappFloat.style.display = "block";
-                    }
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => {
+                        if (entry.isIntersecting) {
+                            whatsappFloat.classList.add("hidden");
+                        } else {
+                            whatsappFloat.classList.remove("hidden");
+                        }
+                    }, 150);
                 });
             },
-            { threshold: 0.2 }
+            { threshold: 0.5 }
         );
 
-        observer.observe(contactSection);
+        observer.observe(target);
     }
 
     // ===== GLightbox =====
@@ -635,7 +641,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const url = `https://wa.me/60128733838?text=${encodeURIComponent(msg[lang])}`;
 
         if (whatsappLink) whatsappLink.href = url;
-        if (whatsappFloat) whatsappFloat.href = url; // 🔥 YOU MISSED THIS
+        if (whatsappFloat) whatsappFloat.href = url;
     }
 
     document.querySelectorAll(".lang-select").forEach(option => {
