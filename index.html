@@ -582,7 +582,32 @@ BM
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    // Initialize GLightbox
+
+    // Elements
+    const whatsappFloat = document.getElementById("whatsappFloat");
+    const contactSection = document.getElementById("contact");
+    const whatsappLink = document.getElementById("whatsappLink");
+    const langDropdown = document.getElementById("langDropdown");
+
+    // ===== Floating Button Hide Logic =====
+    if (whatsappFloat && contactSection) {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        whatsappFloat.style.display = "none";
+                    } else {
+                        whatsappFloat.style.display = "block";
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
+
+        observer.observe(contactSection);
+    }
+
+    // ===== GLightbox =====
     const lightbox = GLightbox({
         selector: '.glightbox',
         touchNavigation: true,
@@ -590,13 +615,14 @@ document.addEventListener("DOMContentLoaded", function() {
         zoomable: true,
     });
 
-    // Language switcher
-    const langDropdown = document.getElementById("langDropdown");
-    const whatsappLink = document.getElementById("whatsappLink");
-
+    // ===== Language Switch =====
     function setLanguage(lang) {
-        document.querySelectorAll(".lang-bm, .lang-en, .lang-cn").forEach(el => el.classList.add("d-none"));
-        document.querySelectorAll(".lang-" + lang).forEach(el => el.classList.remove("d-none"));
+        document.querySelectorAll(".lang-bm, .lang-en, .lang-cn")
+            .forEach(el => el.classList.add("d-none"));
+
+        document.querySelectorAll(".lang-" + lang)
+            .forEach(el => el.classList.remove("d-none"));
+
         langDropdown.textContent = lang.toUpperCase() === "CN" ? "中文" : lang.toUpperCase();
         localStorage.setItem("selectedLang", lang);
 
@@ -605,9 +631,11 @@ document.addEventListener("DOMContentLoaded", function() {
             en: "Hi, I'm interested in your handicraft products",
             cn: "你好，我对您的手工艺品感兴趣"
         };
-        if (whatsappLink) {
-            whatsappLink.href = `https://wa.me/60128169367?text=${encodeURIComponent(msg[lang])}`;
-        }
+
+        const url = `https://wa.me/60128169367?text=${encodeURIComponent(msg[lang])}`;
+
+        if (whatsappLink) whatsappLink.href = url;
+        if (whatsappFloat) whatsappFloat.href = url; // 🔥 YOU MISSED THIS
     }
 
     document.querySelectorAll(".lang-select").forEach(option => {
@@ -617,7 +645,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Load saved language or default
     const savedLang = localStorage.getItem("selectedLang") || "bm";
     setLanguage(savedLang);
 });
